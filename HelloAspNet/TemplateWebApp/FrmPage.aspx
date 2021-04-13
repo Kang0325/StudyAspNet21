@@ -21,7 +21,7 @@
     <form id="form1" runat="server">
         <div class="container">
             <div class="row">
-                <div class="col-md-12" style="background-color:aqua">
+                <div class="col-md-12" style="background-color:aquamarine">
                     <nav:Navigator runat="server" ID="NcNavigator" />
                 </div>
             </div>
@@ -29,12 +29,12 @@
                 <div class="col-md-4" style="background-color:antiquewhite">
                     <cat:Category runat="server" ID="NcCategory" />
                 </div>
-                <div class="col-md-8" style="background-color:red">
+                <div class="col-md-8" style="background-color:burlywood">
                     카탈로그
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12" style="background-color:green">
+                <div class="col-md-12" style="background-color:cadetblue">
                     <cpy:Copyright runat="server" ID="UcCopyright" />
                 </div>
             </div>

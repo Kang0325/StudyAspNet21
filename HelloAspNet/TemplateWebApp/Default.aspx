@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron" >
-        <h1 class=text-center>마스터 사용 첫페이지</h1>
+        <h1>마스터 사용 첫페이지</h1>
         <p>
             rolem ipsum
         </p>
