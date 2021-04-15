@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Dul;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace Helpers.Test
@@ -34,6 +35,14 @@ namespace Helpers.Test
             var expected = 10;
             var actual = (5+5);
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void IsPhotoTest()
+        {
+            var imagePath = @"C:\Users\PKNU\Desktop/main.png";
+            bool result = BoardLibrary.IsPhoto(imagePath);
+            Assert.IsTrue(result, "file extension must be png, jpg, gif");
         }
     }
 }
