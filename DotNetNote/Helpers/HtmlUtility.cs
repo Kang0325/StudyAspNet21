@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dul
+namespace Helpers
 {
     public class HtmlUtility
     {

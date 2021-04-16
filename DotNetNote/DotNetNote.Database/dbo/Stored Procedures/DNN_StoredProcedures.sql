@@ -62,7 +62,7 @@ As
 Go
 
 --[4] 게시판(DotNetNote)에 글을 답변 : ReplyNote
-Create Proc dbo.ReplyNote
+Create Procedure dbo.ReplyNote
     @Name       NVarChar(25), 
     @Email      NVarChar(100), 
     @Title      NVarChar(150), 
@@ -124,13 +124,13 @@ As
 Go
 
 --[5] DotNetNote 테이블에 있는 레코드의 개수를 구하는 저장 프로시저
-Create Proc dbo.GetCountNotes
+Create Procedure dbo.GetCountNotes
 As
     Select Count(*) From Notes
 Go
 
 --[6] 검색 결과의 레코드 수 반환
-Create Proc dbo.SearchNoteCount
+Create Procedure dbo.SearchNoteCount
     @SearchField NVarChar(25),
     @SearchQuery NVarChar(25)
 As
@@ -225,24 +225,24 @@ As
 
     If @cnt > 0 -- 번호와 암호가 맞는게 있다면...
     Begin
-        UPDATE Notes 
-        SET 
-            Name = @Name,
-            Email = @Email,
-            Title = @Title,
-            ModifyIp = @ModifyIp,
-            ModifyDate = GetDate(),
-            Content = @Content,
-            Encoding = @Encoding,
-            Homepage = @Homepage,
-            FileName = @FileName,
-            FileSize = @FileSize
-        WHERE Id = @Id
+        Update Notes 
+        Set 
+            Name = @Name
+          , Email = @Email
+          , Title = @Title
+          , ModifyIp = @ModifyIp
+          , ModifyDate = GetDate()
+          , Content = @Content
+          , Encoding = @Encoding
+          , Homepage = @Homepage
+          , FileName = @FileName
+          , FileSize = @FileSize
+        Where Id = @Id
 
-        SELECT '1'
+        Select '1'
     End
     Else
-        SELECT '0'
+        Select '0'
 Go
 
 --[9] 게시판(DotNetNote)에서 데이터 검색 리스트 : SearchNotes

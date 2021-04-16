@@ -1,8 +1,7 @@
-﻿-- 댓글용
+﻿--댓글용 NoteComments DDL
 Create Table dbo.NoteComments
 (
-    Id          Int Identity(1, 1) 
-                Not Null Primary Key,               -- 일련번호
+    Id          Int Identity(1, 1) Not Null Primary Key,               -- 일련번호
     BoardName   NVarChar(50) Null,                  -- 게시판이름(확장): Notice
     BoardId     Int Not Null,                       -- 해당 게시판의 게시물 번호
     Name        NVarChar(25) Not Null,              -- 작성자

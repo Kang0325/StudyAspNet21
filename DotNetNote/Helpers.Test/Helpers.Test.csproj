@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E858C882-05AC-45A7-9C0A-C65D0C5D799F}</ProjectGuid>
+    <ProjectGuid>{13D4AD67-8F2F-4BAC-87AA-E1E31133DF78}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Helpers.Test</RootNamespace>
@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Helpers\Helpers.csproj">
-      <Project>{16e87c46-1190-407e-abe2-e6cf9bb1e591}</Project>
+      <Project>{ca00f414-0278-4da0-b92f-b5b1329bd31a}</Project>
       <Name>Helpers</Name>
     </ProjectReference>
   </ItemGroup>

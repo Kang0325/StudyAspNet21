@@ -1,4 +1,4 @@
-﻿-- Notes DDL
+﻿--Notes DDL
 Create Table dbo.Notes
 (
     Id              Int Identity(1, 1) Not Null Primary Key,  --번호

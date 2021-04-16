@@ -1,11 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
 
 namespace DotNetNote.Models
 {
-    /// <summary>
-    /// Note 클래스: Notes 테이블과 일대일 매핑되는 ViewModel 클래스
-    /// </summary>
     public class Note
     {
         [Display(Name = "번호")]
@@ -13,7 +13,7 @@ namespace DotNetNote.Models
         [Display(Name = "작성자")]
         [Required(ErrorMessage = "* 이름을 작성해 주세요.")]
         public string Name { get; set; }
-        [EmailAddress(ErrorMessage = "이메일을 정확인 입력하세요.")]
+        [EmailAddress(ErrorMessage = "이메일을 정확히 입력하세요.")]
         public string Email { get; set; }
         [Display(Name = "제목")]
         [Required(ErrorMessage = "* 제목을 작성해 주세요.")]

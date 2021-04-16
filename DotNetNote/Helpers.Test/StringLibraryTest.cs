@@ -1,5 +1,4 @@
-﻿using Dul;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace Helpers.Test
@@ -8,16 +7,15 @@ namespace Helpers.Test
     public class StringLibraryTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CutStringTest()
         {
             string strCut = "Hello World, This is a test sentence";
             int intChar = 15;
 
-            var expected = "Hello World,...";
+            var expected = "Hello World,...";// Cutstring을 사용했을때 예상되는 값
             var actual = StringLibrary.CutString(strCut, intChar);
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void CutStringUnicodeTest()
         {
@@ -28,21 +26,27 @@ namespace Helpers.Test
             var actual = StringLibrary.CutStringUnicode(strCut, intChar);
             Assert.AreEqual(expected, actual);
         }
-
+        [Ignore]
         [TestMethod]
         public void AddTest()
         {
             var expected = 10;
-            var actual = (5+5);
+            var actual = (5 + 5);
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void IsPhotoTest()
         {
-            var imagePath = @"C:\Users\PKNU\Desktop/main.png";
+            var imagePath = @"D:\GitRepository\StudyDesktopApp\WPFApp\main.png";
             bool result = BoardLibrary.IsPhoto(imagePath);
-            Assert.IsTrue(result, "file extension must be png, jpg, gif");
+            Assert.IsTrue(result, "file extension must be png,jpg,gif");
+        }
+        [TestMethod]
+        public void IsNotPhotoTest()
+        {
+            var imagePath = @"D:\GitRepository\StudyDesktopApp\WPFApp\main.pdf";
+            bool result = BoardLibrary.IsPhoto(imagePath);
+            Assert.IsFalse(result, "file extension must be png,jpg,gif");
         }
     }
 }

@@ -1,13 +1,10 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
 
-/// <summary>
-/// Dul.dll: Development Utility Library
-/// </summary>
-namespace Dul
+namespace Helpers
 {
-    /// <summary>
-    /// 파일 처리 관련 기본 유틸리티
-    /// </summary>
     public class FileUtility
     {
         #region 중복된 파일명 뒤에 번호 붙이는 메서드 : GetFileNameWithNumbering

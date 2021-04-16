@@ -1,25 +1,26 @@
 ﻿using Dapper;
 using Helpers;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Web;
 
 namespace DotNetNote.Models
 {
     public class DbRepository
     {
         private SqlConnection con;
-
+        
         public DbRepository()
         {
             con = new SqlConnection(ConfigurationManager.ConnectionStrings[
                 "ConnectionString"].ConnectionString);
 
-            BoardLibrary.LOGGER.Info("Dapper 리포지트리 생성");
+            BoardLibrary.LOGGER.Info("Dapper 리포지토리 생성!");
         }
-
         #region Notes 테이블 처리영역
 
         /// <summary>
@@ -32,7 +33,7 @@ namespace DotNetNote.Models
             // 파라미터 추가
             var p = new DynamicParameters();
 
-            //[a] 공통 : Dapper방식
+            //[a] 공통
             p.Add("@Name", value: n.Name, dbType: DbType.String);
             p.Add("@Email", value: n.Email, dbType: DbType.String);
             p.Add("@Title", value: n.Title, dbType: DbType.String);
@@ -48,13 +49,12 @@ namespace DotNetNote.Models
                 case BoardWriteFormType.Write:
                     //[b] 글쓰기 전용
                     p.Add("@PostIp", value: n.PostIp, dbType: DbType.String);
-                    // 저장 프로시저 결과값 1(저장성공) or 0(저장실패)
+                    //저장프로시저 결과값 1(저장성공) or 0(저장실패)
                     r = con.Execute("WriteNote", p, commandType: CommandType.StoredProcedure);
                     break;
                 case BoardWriteFormType.Modify:
                     //[b] 수정하기 전용
-                    p.Add("@ModifyIp",
-                        value: n.ModifyIp, dbType: DbType.String);
+                    p.Add("@ModifyIp", value: n.ModifyIp, dbType: DbType.String);
                     p.Add("@Id", value: n.Id, dbType: DbType.Int32);
 
                     r = con.Execute("ModifyNote", p,
@@ -63,9 +63,11 @@ namespace DotNetNote.Models
                 case BoardWriteFormType.Reply:
                     //[b] 답변쓰기 전용
                     p.Add("@PostIp", value: n.PostIp, dbType: DbType.String);
-                    p.Add("@ParentNum", value: n.ParentNum, dbType: DbType.Int32);
+                    p.Add("@ParentNum",
+                        value: n.ParentNum, dbType: DbType.Int32);
 
-                    r = con.Execute("ReplyNote", p, commandType: CommandType.StoredProcedure);
+                    r = con.Execute("ReplyNote", p,
+                        commandType: CommandType.StoredProcedure);
                     break;
             }
 
@@ -84,7 +86,7 @@ namespace DotNetNote.Models
             catch (System.Exception ex)
             {
                 BoardLibrary.LOGGER.Error($"예외발생 : {ex.Message}");
-                // throw new System.Exception(ex.Message); // 로깅 처리 권장 영역
+                //throw new System.Exception(ex.Message); // 로깅 처리 권장 영역
             }
         }
 
@@ -172,9 +174,8 @@ namespace DotNetNote.Models
                 return con.Query<int>(
                     "Select Count(*) From Notes").SingleOrDefault();
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
-                BoardLibrary.LOGGER.Error($"예외발생 : {ex.Message}");
                 return -1;
             }
         }
@@ -206,7 +207,7 @@ namespace DotNetNote.Models
         }
 
         /// <summary>
-        /// 다운 카운트 1 증가
+        /// 파일 다운로드 카운트 1 증가
         /// </summary>
         public void UpdateDownCount(string fileName)
         {
@@ -285,7 +286,6 @@ namespace DotNetNote.Models
                 + " FROM Notes Order By Id Desc";
             return con.Query<Note>(sql).ToList();
         }
-
         #endregion
 
         #region NoteComments 테이블 처리영역
@@ -360,7 +360,6 @@ namespace DotNetNote.Models
                 FROM NoteComments Order By Id Desc";
             return con.Query<NoteComment>(sql).ToList();
         }
-
         #endregion
     }
 }

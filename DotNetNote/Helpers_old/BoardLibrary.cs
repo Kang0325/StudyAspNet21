@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Dul
+namespace Helpers
 {
     public class BoardLibrary
     {
