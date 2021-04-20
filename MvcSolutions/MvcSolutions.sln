@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbWebApp", "DbWebApp\DbWebA
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MvcWebLab.Database", "MvcWebLab.Database\MvcWebLab.Database.sqlproj", "{6D9A347C-2305-407D-989B-D93F44D59682}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoListWebApp", "TodoListWebApp\TodoListWebApp.csproj", "{6D1F34B5-55F6-4DDC-A941-0E6E23C91BA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoListWebApp", "TodoListWebApp\TodoListWebApp.csproj", "{6D1F34B5-55F6-4DDC-A941-0E6E23C91BA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApiTestApp", "RestApiTestApp\RestApiTestApp.csproj", "{7426A17C-0400-4BC3-8500-AD4DBED15ABE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPortfolio", "MyPortpolio\MyPortfolio.csproj", "{71D2368A-D15E-4900-8819-5E3F1460A99D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,14 @@ Global
 		{6D1F34B5-55F6-4DDC-A941-0E6E23C91BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D1F34B5-55F6-4DDC-A941-0E6E23C91BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D1F34B5-55F6-4DDC-A941-0E6E23C91BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7426A17C-0400-4BC3-8500-AD4DBED15ABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7426A17C-0400-4BC3-8500-AD4DBED15ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7426A17C-0400-4BC3-8500-AD4DBED15ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7426A17C-0400-4BC3-8500-AD4DBED15ABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71D2368A-D15E-4900-8819-5E3F1460A99D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D2368A-D15E-4900-8819-5E3F1460A99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D2368A-D15E-4900-8819-5E3F1460A99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D2368A-D15E-4900-8819-5E3F1460A99D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
