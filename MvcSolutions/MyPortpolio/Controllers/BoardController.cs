@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyPortfolio.Models;
 using MyPortpolio.Data;
+using X.PagedList; // 페이지리스트 라이브러리 추가 21.04.22
 
 namespace MyPortfolio.Controllers
 {
@@ -20,9 +21,14 @@ namespace MyPortfolio.Controllers
         }
 
         // GET: Board
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page)
         {
-            return View(await _context.Boards.ToListAsync());
+            var pageNumber = page ?? 1; // page값이 null이면 1
+            var pageSize = 10;
+
+            var boards = await _context.Boards.ToPagedListAsync(pageNumber, pageSize);
+
+            return View(boards);
         }
 
         // GET: Board/Details/5
@@ -39,6 +45,11 @@ namespace MyPortfolio.Controllers
             {
                 return NotFound();
             }
+
+            // ReadCount 증가
+            board.ReadCount += 1;
+            _context.Boards.Update(board);
+            _context.SaveChanges(); // commit 중요
 
             return View(board);
         }
