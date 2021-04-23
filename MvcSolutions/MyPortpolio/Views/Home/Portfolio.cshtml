@@ -3,28 +3,42 @@
     Layout = "~/Views/Shared/_ProfileLayout.cshtml";
 }
 <div class="row">
-    <div class="col-md-8 ml-auto mr-auto text-center">
+    <div class="col-md ml-auto mr-auto text-center">
         <h2 class="title">Portfolio</h2>
-        <h5 class="description">작업했던 포트폴리오입니다.</h5>
+        <h5 class="description">
+            작업했던 포트폴리오입니다.<br />
+            <a href="https://github.com/Kang0325?tab=repositories" target="_blank" class="btn btn-link">Github Link</a>
+        </h5>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-6 ml-auto mr-auto">
+    <div class="col-md-10 ml-auto mr-auto">
         <div class="profile-tabs">
             <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+
                 <li class="nav-item">
-                    <a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
-                        <i class="material-icons">camera</i> Studio
+                    <a class="nav-link active" href="#description" role="tab" data-toggle="tab">
+                        <i class="material-icons">description</i> HTML_HOMEPAGE
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#works" role="tab" data-toggle="tab">
-                        <i class="material-icons">palette</i> Work
+                    <a class="nav-link" href="#looks_one_wpf" role="tab" data-toggle="tab">
+                        <i class="material-icons">looks_one</i> Wpf_1
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
-                        <i class="material-icons">favorite</i> Favorite
+                    <a class="nav-link" href="#looks_two_wpf" role="tab" data-toggle="tab">
+                        <i class="material-icons">looks_two</i> Wpf_2
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#movie" role="tab" data-toggle="tab">
+                        <i class="material-icons">movie</i> movie_app
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#inventory_2" role="tab" data-toggle="tab">
+                        <i class="material-icons">inventory_2</i> sms_app
                     </a>
                 </li>
             </ul>
@@ -32,42 +46,186 @@
     </div>
 </div>
 <div class="tab-content tab-space">
-    <div class="tab-pane active text-center gallery" id="studio">
+    <div class="tab-pane active text-center gallery" id="description">
         <div class="row">
             <div class="col-md-3 ml-auto">
-                <img src="~/assets/img/examples/studio-1.jpg" class="rounded">
-                <img src="~/assets/img/examples/studio-2.jpg" class="rounded">
+                <img src="~/assets/img/html/ref1.png" class="rounded">
             </div>
             <div class="col-md-3 mr-auto">
-                <img src="~/assets/img/examples/studio-5.jpg" class="rounded">
-                <img src="~/assets/img/examples/studio-4.jpg" class="rounded">
+                <img src="~/assets/img/html/ref2.png" class="rounded">
             </div>
         </div>
     </div>
-    <div class="tab-pane text-center gallery" id="works">
+    <div class="tab-pane text-center gallery" id="looks_one_wpf">
         <div class="row">
             <div class="col-md-3 ml-auto">
-                <img src="~/assets/img/examples/olu-eletu.jpg" class="rounded">
-                <img src="~/assets/img/examples/clem-onojeghuo.jpg" class="rounded">
-                <img src="~/assets/img/examples/cynthia-del-rio.jpg" class="rounded">
+                <img src="~/assets/img/wpf1/HelloWpfApp.png" class="rounded">
+                <img src="~/assets/img/wpf1/Calculator.png" class="rounded">
             </div>
             <div class="col-md-3 mr-auto">
-                <img src="~/assets/img/examples/mariya-georgieva.jpg" class="rounded">
-                <img src="~/assets/img/examples/clem-onojegaw.jpg" class="rounded">
+                <img src="~/assets/img/wpf1/AnalogClock.png" class="rounded">
+                <img src="~/assets/img/wpf1/BmiCalc.png" class="rounded">
+            </div>
+            <div class="col-md-3 mr-auto">
+                <img src="~/assets/img/wpf1/MonteCarloPi.png" class="rounded">
+                <img src="~/assets/img/wpf1/SnakeBiteGameApp.png" class="rounded">
+            </div>
+            <div class="col-md-3 mr-auto">
+                <img src="~/assets/img/wpf1/BlinkerApp.png" class="rounded">
+                <img src="~/assets/img/wpf1/WpfCalculatorApp.png" class="rounded">
             </div>
         </div>
     </div>
-    <div class="tab-pane text-center gallery" id="favorite">
+    <div class="tab-pane text-center gallery" id="looks_two_wpf">
         <div class="row">
             <div class="col-md-3 ml-auto">
-                <img src="~/assets/img/examples/mariya-georgieva.jpg" class="rounded">
-                <img src="~/assets/img/examples/studio-3.jpg" class="rounded">
+                <img src="~/assets/img/wpf2/FineDustMonApp.png" class="rounded">
+                <img src="~/assets/img/wpf2/ModernUITestApp.png" class="rounded">
             </div>
             <div class="col-md-3 mr-auto">
-                <img src="~/assets/img/examples/clem-onojeghuo.jpg" class="rounded">
-                <img src="~/assets/img/examples/olu-eletu.jpg" class="rounded">
-                <img src="~/assets/img/examples/studio-1.jpg" class="rounded">
+                <img src="~/assets/img/wpf2/PhotoSensorMonApp.png" class="rounded">
+                <img src="~/assets/img/wpf2/WpfLoginApp.png" class="rounded">
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane text-center gallery" id="movie">
+        <div class="row">
+            <div class="col-md-3 ml-auto">
+                <img src="~/assets/img/movie/naver1.png" class="rounded">
+                <img src="~/assets/img/movie/naver5.png" class="rounded">
+                <img src="~/assets/img/movie/naver3.png" class="rounded">
+            </div>
+            <div class="col-md-3 mr-auto">
+                <img src="~/assets/img/movie/naver2.png" class="rounded">
+                <img src="~/assets/img/movie/naver4.png" class="rounded">
+                <img src="~/assets/img/movie/naver6.png" class="rounded">
+            </div>
+            <div class="col-md-3 mr-auto">
+                <img src="~/assets/img/movie/naver7.png" class="rounded">
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane text-center gallery" id="inventory_2">
+        <div class="row">
+            <div class="col-md-3 ml-auto">
+                <img src="~/assets/img/sms/sms1.png" class="rounded">
+                <img src="~/assets/img/sms/sms2.png" class="rounded">
+                <img src="~/assets/img/sms/sms3.png" class="rounded">
+            </div>
+            <div class="col-md-3 mr-auto">
+                <img src="~/assets/img/sms/sms4.png" class="rounded">
+                <img src="~/assets/img/sms/sms5.png" class="rounded">
+
             </div>
         </div>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-10 ml-auto mr-auto">
+        <div class="profile-tabs">
+            <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#book" role="tab" data-toggle="tab">
+                        <i class="material-icons">book</i> C#_Address
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#looks_one" role="tab" data-toggle="tab">
+                        <i class="material-icons">looks_one</i> Winform_1
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#looks_two" role="tab" data-toggle="tab">
+                        <i class="material-icons">looks_two</i> Winform_2
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#storefront" role="tab" data-toggle="tab">
+                        <i class="material-icons">storefront</i> Win_rentalshop
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="tab-content tab-space">
+    <div class="tab-pane active text-center gallery" id="book">
+        <div class="row">
+            <div class="col-md-3 ml-auto">
+                <img src="~/assets/img/csharp/1.주소입력.png" class="rounded">
+                <img src="~/assets/img/csharp/2.주소검색.png" class="rounded">
+                <img src="~/assets/img/csharp/3.주소수정.png" class="rounded">
+            </div>
+            <div class="col-md-3 mr-auto">
+                <img src="~/assets/img/csharp/4.주소삭제.png" class="rounded">
+                <img src="~/assets/img/csharp/5.주소전체출력.png" class="rounded">
+                <img src="~/assets/img/csharp/6.프로그램종료.png" class="rounded">
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane text-center gallery" id="looks_one">
+        <div class="row">
+            <div class="col-md-3 ml-auto">
+                <img src="~/assets/img/winform1/AlarmClock.png" class="rounded">
+                <img src="~/assets/img/winform1/DateCalc.png" class="rounded">
+                <img src="~/assets/img/winform1/MyNotePadApp.png" class="rounded">
+                <img src="~/assets/img/winform1/DigitalClock.png" class="rounded">
+            </div>
+            <div class="col-md-3 mr-auto">
+                <img src="~/assets/img/winform1/ListView.png" class="rounded">
+                <img src="~/assets/img/winform1/MoviePlayer.png" class="rounded">
+                <img src="~/assets/img/winform1/RestaurentSel.png" class="rounded">
+                <img src="~/assets/img/winform1/TravelWish.png" class="rounded">
+            </div>
+            <div class="col-md-3 mr-auto">
+                <img src="~/assets/img/winform1/SimpleGraphicEditor.png" class="rounded">
+                <img src="~/assets/img/winform1/StudyHistory.png" class="rounded">
+                <img src="~/assets/img/winform1/TextViewer.png" class="rounded">
+            </div>
+            <div class="col-md-3 mr-auto">
+                <img src="~/assets/img/winform1/Listbox.png" class="rounded">
+                <img src="~/assets/img/winform1/WinCalculatorApp.png" class="rounded">
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane text-center gallery" id="looks_two">
+        <div class="row">
+            <div class="col-md-3 ml-auto">
+                <img src="~/assets/img/winform2/AddressInfoApp.png" class="rounded">
+                <img src="~/assets/img/winform2/CheckBoxWinApp.png" class="rounded">
+                <img src="~/assets/img/winform2/WinChartApp.png" class="rounded">
+            </div>
+            <div class="col-md-3 mr-auto">
+                <img src="~/assets/img/winform2/ColorChangerApp.png" class="rounded">
+                <img src="~/assets/img/winform2/FlgWinApp.png" class="rounded">
+                <img src="~/assets/img/winform2/ImageViewerApp.png" class="rounded">
+            </div>
+            <div class="col-md-3 mr-auto">
+                <img src="~/assets/img/winform2/IoTSensorMonApp.png" class="rounded">
+                <img src="~/assets/img/winform2/LabelTestApp.png" class="rounded">
+                <img src="~/assets/img/winform2/LoginApp.png" class="rounded">
+            </div>
+            <div class="col-md-3 mr-auto">
+                <img src="~/assets/img/winform2/MaskedTextApp.png" class="rounded">
+                <img src="~/assets/img/winform2/PracticeWinApp.png" class="rounded">
+                <img src="~/assets/img/winform2/RadioButtonWinApp.png" class="rounded">
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane text-center gallery" id="storefront">
+        <div class="row">
+            <div class="col-md-3 ml-auto">
+                <img src="~/assets/img/winform3/BookRentalShopApp1.png" class="rounded">
+                <img src="~/assets/img/winform3/BookRentalShopApp2.png" class="rounded">
+                <img src="~/assets/img/winform3/BookRentalShopApp3.png" class="rounded">
+            </div>
+            <div class="col-md-3 mr-auto">
+                <img src="~/assets/img/winform3/BookRentalShopApp4.png" class="rounded">
+                <img src="~/assets/img/winform3/BookRentalShopApp5.png" class="rounded">
+            </div>
+        </div>
+    </div>
+</div>
+
