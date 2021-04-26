@@ -24,7 +24,7 @@ namespace MyPortfolio.Controllers
         public async Task<IActionResult> Index(int? page)
         {
             var pageNumber = page ?? 1; // page값이 null이면 1
-            var pageSize = 10;
+            var pageSize = 6;
 
             var boards = await _context.Boards.ToPagedListAsync(pageNumber, pageSize);
 
